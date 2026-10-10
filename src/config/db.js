@@ -1,17 +1,14 @@
-import pg from 'pg';
+import { createClient } from '@supabase/supabase-js';
 import dotenv from 'dotenv';
 
-dotenv.config(); // Memuat variabel dari .env 
+dotenv.config();
 
-const { Pool } = pg;
+const { SUPABASE_URL, SUPABASE_KEY } = process.env;
 
-export const pool = new Pool({
-  connectionString: process.env.DATABASE_URL,
-  ssl: {
-    rejectUnauthorized: false
-  }
-});
+if (!SUPABASE_URL || !SUPABASE_KEY) {
+  console.warn('[config] SUPABASE_URL / SUPABASE_KEY belum diset. Cek file .env atau Environment Variables di Vercel.');
+}
 
-pool.on('connect', () => {
-  console.log('Database terhubung dengan sukses.');
+export const supabase = createClient(SUPABASE_URL || 'http://localhost', SUPABASE_KEY || 'missing-key', {
+  auth: { persistSession: false },
 });

@@ -1,23 +1,26 @@
 {
-  "name": "smart-library-api-kel53",
+  "name": "smart-library-api-kel40",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "REST API pencatatan peminjaman buku perpustakaan (Express.js + Supabase)",
+  "main": "src/app.js",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node src/index.js",
     "dev": "nodemon src/index.js"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "express",
+    "supabase",
+    "rest-api",
+    "perpustakaan"
+  ],
   "license": "ISC",
   "dependencies": {
+    "@supabase/supabase-js": "^2.45.0",
     "dotenv": "^17.3.1",
-    "express": "^5.2.1",
-    "pg": "^8.20.0"
+    "express": "^5.2.1"
   },
   "devDependencies": {
-    "nodemon": "^3.1.14"
+    "nodemon": "^1.14.10"
   }
 }
