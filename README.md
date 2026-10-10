@@ -2,7 +2,7 @@
 
 REST API sederhana untuk **pencatatan peminjaman buku perpustakaan**, dibuat untuk Responsi Modul 1 Praktikum Pemrograman Perangkat Bergerak (PPB) 2026.
 
-**Base URL (Vercel):** `https://GANTI-DENGAN-LINK-VERCEL.vercel.app`
+**Base URL (Vercel):** `https://responsi-modul-1-ppb.vercel.app`
 
 ## Deskripsi & Tujuan
 
@@ -162,9 +162,9 @@ Response `200 OK` (`return_date` otomatis terisi hari ini jika tidak dikirim):
 ### Contoh cURL
 
 ```bash
-curl "https://GANTI-DENGAN-LINK-VERCEL.vercel.app/loans?status=Terlambat"
+curl "https://responsi-modul-1-ppb.vercel.app/loans?status=Terlambat"
 
-curl -X POST "https://GANTI-DENGAN-LINK-VERCEL.vercel.app/loans" \
+curl -X POST "https://responsi-modul-1-ppb.vercel.app/loans" \
   -H "Content-Type: application/json" \
   -d '{"member_name":"Rina","member_nim":"21120123140010","book_title":"Basis Data","due_date":"2026-10-24"}'
 ```
@@ -203,7 +203,7 @@ Prasyarat: Node.js 18+ dan akun [Supabase](https://supabase.com).
 3. Pada **Environment Variables**, isi `SUPABASE_URL` dan `SUPABASE_KEY`.
 4. Klik **Deploy**. Konfigurasi routing sudah ada di `vercel.json` dan `api/index.js`.
 
-**Link deployment:** https://GANTI-DENGAN-LINK-VERCEL.vercel.app
+**Link deployment:** https://responsi-modul-1-ppb.vercel.app
 
 ## Struktur Proyek
 
@@ -223,4 +223,4 @@ Prasyarat: Node.js 18+ dan akun [Supabase](https://supabase.com).
 
 ## Anggota Kelompok 40
 
-- (isi nama & NIM anggota)
+- Syauqi Akifur Rahman 21120124130097
